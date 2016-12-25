@@ -26,21 +26,27 @@ def openfile_rc(event=None):
     file = open(askopenfilename())
     a = file.read()
     b = inarray(a)
+    print("自反闭包(reflexive closure):")
     outarray(closure.reflexive_closure(b))
+    print("\n")
 
 
 def openfile_sc(event=None):
     file = open(askopenfilename())
     a = file.read()
     b = inarray(a)
+    print("对称闭包(symmetric closure):")
     outarray(closure.symmetric_closure(b))
+    print("\n")
 
 
 def openfile_tc(event=None):
     file = open(askopenfilename())
     a = file.read()
     b = inarray(a)
+    print("传递闭包(transitive closure):")
     outarray(closure.transitive_closure(b))
+    print("\n")
 
 
 def rc():

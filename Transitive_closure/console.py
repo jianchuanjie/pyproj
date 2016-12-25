@@ -22,6 +22,8 @@ def outarray(ans):
 
 b = inarray(s)
 ans = closure.transitive_closure(b)
-outarray(ans)
+print("传递闭包(transitive closure):")
+outarray(closure.transitive_closure(b))
+print("\n")
 if input('anykey to quit'):
     sys.exit()
