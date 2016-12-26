@@ -21,15 +21,15 @@ def matrix_logical_or(a, b):
         ans = [[0 for i in range(len(a))] for i in range(len(a[0]))]
         for i in range(len(a)):
             for j in range(len(b[0])):
-                if a[i][j] == 1 or b[i][j] == 1:
-                    ans[i][j] = 1
-                else:
+                if a[i][j] == 0 and b[i][j] == 0:
                     ans[i][j] = 0
+                else:
+                    ans[i][j] = 1
         return ans
 
 
 if __name__ == '__main__':
-    a = [[1] * 4] * 4
+    a = [[0] * 4] * 4
     b = [[1, 2, 1, 0], [2, 2, 1, 0], [2, 3, 1, 0], [0, 2, 1, 0]]
     print(matrix_multiple(a, b))
     print(matrix_logical_or(a, b))

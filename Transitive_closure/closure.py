@@ -31,9 +31,10 @@ def symmetric_closure(a):
 def transitive_closure(a):
     ans = [[0 for i in range(len(a))] for i in range(len(a))]
     m = a
-    for i in range(len(a)):
-        m = matrix.matrix_multiple(a, m)
+    for i in range(len(a)-1):
         ans = matrix.matrix_logical_or(ans, m)
+        m = matrix.matrix_multiple(a, m)
+
     return ans
 
 
